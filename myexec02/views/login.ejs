@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style type="text/css">
+    .errMsg{
+        color: red;
+    }
+  </style>
+</head>
+<body>
+<h1>login</h1>
+<form action="http://localhost:3000/login" method="post">
+    username: <input type="text" name="username" value=<%= errMsg.username%>> <span class="errMsg"><%= errMsg.usernameErr%></span> <br>
+    password: <input type="password" name="pwd"> <span class="errMsg"><%= errMsg.pwdErr%></span> <br>
+    <input type="text" name="type" value="login" hidden>
+    <input type="submit" value="login">
+</form>
+</body>
+</html>
